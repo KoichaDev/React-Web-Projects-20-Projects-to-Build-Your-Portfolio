@@ -1,8 +1,11 @@
 import './MenuOverlay.scss';
 
-function MenuOverlay() {
+function MenuOverlay({ isOpen }) {
+  const initialClass = 'navigation-nation-overlay overlay-slide-left';
+  const overlayClass = isOpen ? `${initialClass} overlay-active` : initialClass;
+
   return (
-    <div className='navigation-nation-overlay overlay-slide-left' id='overlay'>
+    <div className={overlayClass}>
       <nav>
         <ul>
           <li className='slide-out-1' id='nav-1'>
